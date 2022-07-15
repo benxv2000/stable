@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "dfx": "0.9.3",
+  "canisters": {
+    "stable": {
+      "type": "rust",
+      "package": "stable",
+      "candid": "src/stable/stable.did"
+    },
+    "stable_assets": {
+      "type": "assets",
+      "source": [
+        "src/stable_assets/assets"
+      ],
+      "dependencies": [
+        "stable"
+      ]
+    }
+  },
+  "defaults": {
+    "build": {
+      "packtool": "",
+      "args": ""
+    }
+  },
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  }
+}
